@@ -50,14 +50,54 @@ for (let i = 0; i < 12; i++) {
             ${gerarFileiraFrequencia()}
         </td>
         <td>
-            <input class="campo_tabela" type="number" min="0" max="31">
+            <input class="campo_tabela dias_uteis" type="number" min="0" max="31">
         </td>
         <td>
-            <input class="campo_tabela">
+            <input class="campo_tabela presenca" type="number" min="0" max="31">
         </td>
         <td>
-            <input class="campo_tabela">
+            <input class="campo_tabela horas">
         </td>
     </tr>
     `
 }
+
+const diasUteis = document.querySelectorAll(".dias_uteis");
+const presencas = document.querySelectorAll(".presenca");
+const horas = document.querySelectorAll(".horas");
+const totalDiasUteis = document.querySelector("#total_diasuteis input");
+const totalPresencas = document.querySelector("#total_presencas input");
+const totalHoras = document.querySelector("#total_horas input");
+
+function converterNumero(num) {
+    let out = parseInt(num);
+    if (!isNaN(out)) return out;
+    
+    return 0;
+}
+
+function somaValores(valores) {
+    switch (valores) {
+        case "diasUteis":
+            let diasUteisSoma = 0;
+            diasUteis.forEach(dias => diasUteisSoma += converterNumero(dias.value));
+            totalDiasUteis.value = diasUteisSoma ? diasUteisSoma : "";
+            break;
+        case "presenca":
+            let presencaSoma = 0;
+            presencas.forEach(presenca => presencaSoma += converterNumero(presenca.value));
+            totalPresencas.value = presencaSoma ? presencaSoma : "";
+            break;
+        case "horas":
+            let horasSoma = 0;
+            horas.forEach(hora => horasSoma += converterNumero(hora.value));
+            totalHoras.value = horasSoma ? horasSoma : "";
+            break;
+        default:
+            break;
+    }
+}
+
+diasUteis.forEach(campo => campo.addEventListener("change", e => somaValores("diasUteis")));
+presencas.forEach(campo => campo.addEventListener("change", e => somaValores("presenca")));
+horas.forEach(campo => campo.addEventListener("change", e => somaValores("horas")));

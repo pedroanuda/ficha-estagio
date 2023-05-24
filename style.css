@@ -11,7 +11,7 @@ body {
     margin: 1em;
 }
 
-/* Estilização do Cabeçalho */
+/* Estilização do Cabeçalho e Rodapé */
 .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -32,6 +32,13 @@ body {
     text-align: right;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-top: .4rem;
+}
+
 /* Dados do Estagiário e campo de texto cabecalho*/
 main {
     margin-top: 2rem;
@@ -40,6 +47,7 @@ main {
 .dados_estagiario {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .campo_texto {
@@ -92,29 +100,44 @@ main {
     width: 55%;
 }
 
+.tabela_presenca thead tr th:nth-child(4)
+{
+    width: 8%;
+}
+
+.tabela_presenca thead tr th:is(:nth-child(5), :nth-child(6))
+{
+    width: 10%;
+}
+
 .campo_tabela {
     width: 100%;
-    padding: .5rem .2rem;
+    height: calc(4vh + 1rem);
+    padding: .5rem;
+    font-size: 1rem;
     box-sizing: border-box;
     border: none;
+    appearance: none;
+    text-align: center;
+}
+
+.campo_tabela[type="number"]::-webkit-inner-spin-button {
     appearance: none;
 }
 
 .freq_fileira {
-    display: inline-table;
+    display: grid;
     width: 100%;
     border: none;
-    /* grid-template-columns: repeat(31, 1fr); */
+    grid-template-columns: repeat(31, 1fr);
     padding: 0;
 }
 
 .freq_box {
-    display: table-cell;
     text-align: center;
     box-sizing: border-box;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
-    height: 1rem;
 }
 
 .freq_box:first-child {
@@ -123,7 +146,7 @@ main {
 
 .freq_box span {
     font-weight: bold;
-    font-size: .6rem;
+    font-size: .8rem;
 }
 
 .freq_box select {
@@ -131,8 +154,71 @@ main {
     appearance: none;
     background-color: transparent;
     width: 100%;
-    height: 60%;
+    height: 4vh;
     box-sizing: border-box;
     text-align: center;
-    font-size: .8rem;
+    font-size: 1rem;
+
+}
+
+noscript div {
+    border: 1px solid black;
+    border-top: none;
+    padding: .6rem;
+    text-align: center;
+}
+
+/* Parte Inferior */
+.presencas_e_totais {
+    display: flex;
+    margin-top: .5rem;
+}
+
+.presencas {
+    width: 67%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    font-size: 1rem;
+}
+
+.presencas label {
+    text-align: center;
+}
+
+.totais {
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+
+.totais label {
+    width: 15.1515%;
+}
+
+.totais .tabela {
+    display: inline-table;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 84.8484848%;
+}
+
+.totais .tabela div {
+    border: 1px solid black;
+    display: table-cell;
+    text-align: center;
+    font-size: 1rem;
+    height: calc(4vh + 1rem);
+    width: 35.715%;
+}
+
+.totais .tabela div:first-child {
+    width: 28.57%;
+}
+
+.obs {
+    width: fit-content;
+    text-align: center;
+    font-size: 1.03rem;
+    margin-top: 1.5rem;
+    margin-left: 4.5rem;
 }

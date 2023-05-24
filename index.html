@@ -46,6 +46,7 @@
                 <input type="text" id="polo_ead">
             </div>
         </div>
+
         <table border="1px solid black" class="tabela_presenca">
             <thead>
                 <tr>
@@ -61,6 +62,33 @@
                 <!-- Linhas Incluídas com Javascript -->
             </tbody>
         </table>
+        <noscript>
+            <div>Ative o Javascript para visualizar a tabela.</div>
+        </noscript>
+
+        <div class="presencas_e_totais">
+            <div class="presencas">
+                <label><strong>C - Compareceu</strong></label>
+                <label><strong>F - Faltou</strong></label>
+                <label><strong>X - Não houve expediente</strong></label>
+                <label><strong>L - Licenciado</strong></label>
+                <label><strong>R - Recesso</strong></label>
+            </div>
+            <div class="totais">
+                <label>TOTAIS</label>
+                <div class="tabela">
+                    <div id="total_diasuteis"><input class="campo_tabela" readonly></div>
+                    <div id="total_presencas"><input class="campo_tabela" readonly></div>
+                    <div id="total_horas"><input class="campo_tabela" readonly></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="obs"><strong>Obs.: Esta ficha somente poderá ser preenchida pelo Serviço de Pessoal<br>ou chefe imediato a quem esteja subordinado o estagiário.</strong></div>
     </main>
+    <footer>
+        <a href="segundapagina.html">Avançar para segunda página</a>
+        SERAC/NI
+    </footer>
 </body>
 </html>
