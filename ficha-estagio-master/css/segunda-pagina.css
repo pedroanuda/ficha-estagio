@@ -1,0 +1,139 @@
+@import url(style.css);
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.secao {
+    display: flex;
+    flex-direction: column;
+}
+
+.secao-titulo {
+    border: 1px solid black;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.secao-conteudo {
+    border: 1px solid black;
+    border-top: none;
+    box-sizing: border-box;
+    
+    padding: .4rem;
+   
+    
+
+}
+
+.campos-textos,
+.campos-textos > .parte1 {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.campos-textos > .parte1 {
+    width: 64%;
+    flex-grow: 1;
+}
+
+.campos-textos > .parte2 {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 1.4rem 0 .8rem 1.4rem;
+    width: 32%;
+    box-sizing: border-box;
+}
+
+.campo_texto label {
+    font-weight: normal;
+}
+
+.campo_texto:has(#firma) {
+    width: 72%;
+}
+
+.campo_texto:has(#ramo) {
+    width: 25%;
+}
+
+.campo_texto:has(#endereco) {
+    width: 58%;
+}
+
+.campo_texto:has(#bairro) {
+    width: 20%;
+}
+
+.campo_texto:has(#cep, #telefone #ramal) {
+    width: 33.33%;
+}
+
+.campo_texto:has(#cargo) {
+    width: 60%;
+}
+
+.sm {
+    flex-grow: 0;
+    width: 3%;
+}
+
+#avaliacao{
+    padding-left: 40rem;
+    position: relative;
+    bottom: 20rem;
+    display: grid;
+    gap: 4px;
+    
+}
+
+#obsi{
+    border-bottom: 1px dashed black;
+    outline: none;
+    appearance: none;   
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    width: 55rem;
+    
+    
+}
+
+#datai{
+    border-bottom: 1px dashed black;
+    outline: none;
+    appearance: none;   
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+#nca{
+
+    border-bottom: 1px dashed black;
+    outline: none;
+    appearance: none;   
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    width: 16rem;
+    margin-right: 25px;
+}
+
+#ncalabel{
+
+    font-size: 7px;
+    margin-left: 4.8rem;
+    margin-right: 8.6rem;
+}
+
+.secao-conteudo2{
+
+    font-size: 12px;
+}
+
+
