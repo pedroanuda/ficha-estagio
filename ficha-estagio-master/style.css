@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 1em;
+}
+
+/* Estilização do Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_infocefet {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo_infocefet img {
+    height: 4.5rem;
+}
+
+.titulo_e_sub {
+    text-align: right;
+}
+
+/* Dados do Estagiário e campo de texto cabecalho*/
+main {
+    margin-top: 2rem;
+}
+
+.dados_estagiario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.campo_texto {
+    padding: .2rem;
+    flex-grow: 1;
+    display: flex;
+}
+
+.campo_texto label {
+    font-weight: bold;
+    padding-right: .3rem;
+}
+
+.campo_texto input {
+    border: none;
+    flex-grow: 1;
+    border-bottom: 1px dashed black;
+    outline: none;
+}
+
+.campo_texto input:is(:focus-within) {
+    border-width: 2px;
+}
+
+.campo_texto:has(#nome_estagiario, #curso_estagiario) {
+    min-width: 45vw;
+    flex-grow: 2;
+}
+
+/* Tabela */
+.tabela_presenca {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.tabela_presenca thead tr th {
+    padding: .6rem;
+}
+
+.tabela_presenca thead tr th:nth-child(1) {
+    width: 12%;
+    
+}
+
+.tabela_presenca thead tr th:nth-child(2) {
+    width: 5%;
+}
+
+.tabela_presenca thead tr th:nth-child(3) {
+    width: 55%;
+}
+
+.campo_tabela {
+    width: 100%;
+    padding: .5rem .2rem;
+    box-sizing: border-box;
+    border: none;
+    appearance: none;
+}
+
+.freq_fileira {
+    display: inline-table;
+    width: 100%;
+    border: none;
+    /* grid-template-columns: repeat(31, 1fr); */
+    padding: 0;
+}
+
+.freq_box {
+    display: table-cell;
+    text-align: center;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 1rem;
+    width: 3%;
+    
+}
+
+.freq_box:first-child {
+    border-left: none;
+    
+}
+
+.freq_box span {
+    font-weight: bold;
+    font-size: .6rem;
+}
+
+.freq_box select {
+    border: none;
+    appearance: none;
+    background-color: transparent;
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: .8rem;
+
+}
+
+.presencas{
+position: relative;;
+top: 37.2rem;
+display: grid;
+margin-right: 17rem;
+
+
+grid-template-columns: 20% 20% 20% 20% 20%;
+font-size: 1rem;
+
+}
+
+#exped{
+    position:relative;
+    right: 3.8rem;
+}
+
+.obs{
+    text-align: center;
+    position: relative;
+    top: 40rem;
+    right: 19.8rem;
+    font-size: 1.03rem;
+}
+
+
+
