@@ -22,7 +22,6 @@ body {
     border: 1px solid black;
     border-top: none;
     box-sizing: border-box;
-    overflow-x: hidden;
     padding: .4rem;
 }
 
@@ -77,4 +76,138 @@ body {
 .sm {
     flex-grow: 0;
     width: 3%;
+}
+
+.avaliacao-conteudo,
+.avaliacoes-codigos div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avaliacoes {
+    display: flex;
+    width: 67%;
+    gap: 3vw;
+}
+
+.avaliacoes6 {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.avaliacao {
+    width: calc(100% + 1vw);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avaliacao select {
+    text-align: center;
+    appearance: none;
+    width: 2rem;
+    height: 1.8rem;
+}
+
+.avaliacoes-codigos {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.5%;
+    gap: 1.2rem;
+}
+
+.secao-conteudo-assinaturas {
+    padding-top: .8rem;
+    font-size: .8rem;
+}
+
+.campos_de_assinatura {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 1.7rem;
+}
+
+.campo_assinatura {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.campo_assinatura input {
+    width: 95%;
+    border: none;
+    border-bottom: 1px dashed black;
+    outline: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.campo_assinatura label {
+    font-size: .65rem;
+}
+
+.secao-professor {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 39% 22% 39%;
+}
+
+.secao-professor > div {
+    padding: .4rem;
+}
+
+div.avaliacao-relatorio {
+    padding: 1rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.relatorio-checking {
+    display: flex;
+    flex-direction: column;
+}
+
+.relatorio-checking input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 1.75rem;
+    height: 1.5rem;
+    border: 1px solid black;
+}
+
+div.creditos-professor {
+    padding: 1rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.relatorio-checking input[type="radio"]:checked {
+    background-color: black;
+}
+
+.relatorio-checking > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+#dat {
+    flex-grow: 0;
+    align-items: center;
+}
+
+#datation_professor span {
+    padding: 0 .5rem;
+}
+
+#datation_professor input {
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
